@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Disney</title>
+        <link href="index.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="icon" href="image/icone.jpg">
+    </head>
+    <body background="https://prod-static.disney-plus.net/us-west-2/builds/e76798ab2a732a884562763cbd19b969a80dcd5b_1606148151180/node_modules/dss-junglebook/components/themes/images/background.png">
+        <nav class="navbar">
+            <img src="image/logo-disney.svg" class="logo" alt="">
+            <div class="nav-links">
+                 <ul>
+                <li><a href="#"><img src="image/maison.png" class="img"> ACCUEIL</a> </li>
+                <li><a href="#"><img src="image/loupe.png" class="img"> RECHERCHE</a> </li>
+                <li><a href="#"><img src="image/plus.png" class="img"> MA LISTE</a> </li>
+                <li><a href="#"><img src="image/etoile.png" class="img"> ORIGINALS</a> </li>
+                <li><a href="#"><img src="image/bande.png" class="img"> FILMS</a> </li>
+                <li><a href="#"><img src="image/tv.png" class="img"> SÉRIES</a> </li>
+                </ul>
+            </div>
+            <div class="photo">
+                <img src="image/profil.png" class="pp">
+            </div>
+
+            <img src="menu-btn.png" class="menu-hamburger">
+        </nav>
+
+        <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+        </script>
+
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="image/caca.jpg" alt="1"></div>
+                <div class="slide"><img src="image/falcon.jpg" alt="3"></div>
+            </div>
+        </div>
+
+        <div class="carte-video-contenu">
+            <div class="carte-video">
+                <img src="image/disney.png" alt="" class="carte-video-image">
+                <video src="video/disney.mp4" class="video"></video>
+            </div>
+            <div class="carte-video">
+                <img src="image/pixar.png" alt="" class="carte-video-image">
+                <video src="video/pixar.mp4" class="video"></video>
+            </div>
+            <div class="carte-video">
+                <img src="image/marvel.png" alt="" class="carte-video-image">
+                <video src="video/marvel.mp4" class="video"></video>
+            </div>
+            <div class="carte-video">
+                <img src="image/starwarsmarque.png" alt="" class="carte-video-image">
+                <video src="video/star-wars2.mp4" class="video"></video>
+            </div>
+            <div class="carte-video">
+                <img src="image/national.png" alt="" class="carte-video-image">
+                <video src="video/geographic.mp4" class="video"></video>
+            </div>
+            <div class="carte-video">
+                <img src="image/star.png" alt="" class="carte-video-image">
+                <video src="video/star2.mp4" class="video"></video>
+            </div>
+        </div>
+        <script>
+            const videoCards = [...document.querySelectorAll('.carte-video')];
+
+            videoCards.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    let video = item.children[1];
+                    video.play();
+                })
+                item.addEventListener('mouseleave', () => {
+                    let video = item.children[1];
+                    video.pause();
+                })
+            })
+        </script>
+
+        <section class="nouveau">
+            <div class="nouveau2">
+                <p>Nouveau sur Disney+</p>
+            </div>
+            <div class="ligne-film">
+
+                <div class="film">
+                    <img class="imagefilm" src="image/wonda.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/agents.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/bia.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/legendes.png">
+                </div>
+                <button class="nxt-btn">
+                    <img src="nxt.png">
+                </button>
+                <div class="film">
+                    <img class="imagefilm" src="image/panther.png">
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section class="immanquables">
+            <div class="les-immanquables">
+                <p>Star : les immanquables</p>
+            </div>
+            <div class="ligne-film">
+                <div class="film">
+                    <img class="imagefilm" src="image/narcisse.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/timpelbach.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/plage.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/maman.png">
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/sky.png">
+                </div>
+            </div>
+                </button>
+        </section>
+            <section class="poursuivrelecture">
+            <div class="poursuivre">
+                <p>Poursuivre la lecture</p>
+            </div>
+
+            <div class="ligne-film">
+                <div class="film">
+                    <img class="imagefilm" src="image/starwars.png">
+                    <div class="ligneblanche">
+                    </div>
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/starwars2.png">
+                    <div class="ligneblanche">
+                    </div>
+                    <div class="ligne6">
+                    </div>
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/zoo.png">
+                    <div class="ligneblanche">
+                    </div>
+                    <div class="ligne7">
+                    </div>
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/mickey.png">
+                    <div class="ligneblanche">
+                    </div>
+                    <div class="ligne8">
+                    </div>
+                </div>
+                <div class="film">
+                    <img class="imagefilm" src="image/ratatouille.png">
+                    <div class="ligneblanche">
+                    </div>
+                    <div class="ligne9">
+                    </div>
+                </div>
+            </div>
+                </button>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <img src="image/logo-disney.svg" class="logofinal">
+                <ul class="respect">
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/r%C3%A8gles-de-respect-de-la-vie-priv%C3%A9e">Règles de Respect de la Vie Privée</a> </li>
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/modalit%C3%A9s-relatives-aux-cookies">Modalités relatives aux cookies</a> </li>
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/r%C3%A8gles-de-respect-de-la-vie-priv%C3%A9e">Droits Données dans l'UE et au R-U</a> </li>
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/%C3%A0-propos-de-disney%2B">A propos de Disney+</a> </li>
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/conditions-g%C3%A9n%C3%A9rales-d'abonnement">Conditons générales d'abonnement</a> </li>
+                    <li class="fin"><a href="https://help.disneyplus.com/csp">Aide</a> </li>
+                    <li class="fin"><a href="https://help.disneyplus.com/csp?id=csp_article_content&article=devices-supported">Appareils compatibles</a> </li>
+                    <li class="fin"><a href="https://www.disneyplus.com/fr-fr/legal/%C3%A0-propos-de-disney%2B">A propos de Disney+</a> </li>
+                </ul>
+                <ul class="pub">
+                    <li class="avant-final"><a href="https://preferences-mgr.trustarc.com/?pid=disney01&aid=disneyplusemea01&type=disneyplusemea">Publicités cilbées par centres d'intérêt</a></li>
+                    <li class="avant-final"><a href="#">Gérer vos préférences</a></li>
+                </ul>
+                <p class="final"><a href="#">© Disney. Tous droits réservés.</a></p>
+                <br>
+            </div>
+        </footer>
+    </body>
+</html>
